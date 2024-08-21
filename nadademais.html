@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            float: left;
+        }
+
+        .div1 {
+            float: left;
+            padding: 10px;
+            border: 3px solid #2131ad;
+        }
+        .div2 {
+            padding: 10px;
+            border: 3px solid red;
+            
+        }
+        .div3 {
+            float: left;
+            padding: 10px;
+            border: 3px solid #213bad;
+        }
+        .div4 {
+            padding: 10px;
+            border: 3px solid red;
+            clear: left;
+        }
+        li {
+            display: inline;
+        }
+
+        div.static {
+            position: static;
+            border: 3px solid #3f21ad;
+        }
+
+        div.relative {
+            position: relative;
+            left: 30px;
+            border: 3px solid #3f21ad;
+        }
+
+        div.fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid #3f21ad;
+        }
+
+        div.relative1 {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #3f21ad;
+        }
+
+        div.absolute1 {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #3f21ad;
+        }
+    </style>
+</head>
+<body>
+    <p>Neste exemplo, a imagem flutuará para a direita do parágrafo e o texto no parágrafo será contornado pela imagem</p>
+
+    <p><img src="imagem.jpeg" alt="imagem" style="width: 200px; height: 200px; margin-left: 5px;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nam laborum corrupti fugit! Quia ipsam eveniet, quaerat facilis minima nesciunt ducimus vitae, id quasi officia iusto ab dolore commodi nemo! </p>
+    <br><br><br><br><br><br><br><br><br><br>
+    
+        <h2>Sem Clear</h2>
+        <div class="div1">div1</div>
+        <div class="div2">div2 - Observe que div2 está depois de div1 no código HTML. No entanto, como div1 flutua para a esquerda, o texto em div2 flui em torno de div1</div>
+
+        <h2>Com Clear</h2>
+        <div class="div3">div3</div>
+        <div class="div4">div4 - Aqui, clear: left; move o div4 para baixo do div3 flutuante. O valor "left" limpa os elementos flutuados para a esquerda. Você também pode limpar "direito e "ambos</div>
+
+        <p>Menu Horizontal</p>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Javascript</a></li>
+            </ul>
+        
+            <h2>posição: estática;</h2>
+
+            <p>Um elemento com posição: estático; é sempre posicionado de acordo com o fluxo normal da página:</p>
+        
+            <div class="static">
+                Aqui - position: static;
+            </div>
+        
+        
+            <h2>posição: relativa;</h2>
+        
+            <p>Um elemento com posição: relativa; está posicionado em relação à sua posição normal:</p>
+        
+            <div class="relative">
+                Aqui - position: relative;
+            </div>
+        
+            <body>
+        
+                <h2>posição: fixa;</h2>
+        
+                <p>Um elemento com posição: fixo; está posicionado em relação à janela de visualização, o que significa que
+                    sempre permanece no mesmo lugar, mesmo que a página seja rolada:</p>
+        
+                <div class="fixed">
+                    Aqui - position: fixed;
+                </div>
+        
+                <body>
+        
+                    <h2>position: absolute;</h2>
+                    
+                    <p>Um elemento com posição: absoluto; é posicionado em relação ao ancestral posicionado mais próximo (em vez de posicionado em relação à janela de visualização, como fixo):</p>
+                    
+                    <div class="relative1">Aqui - position: relative;
+                      <div class="absolute1">Aqui - position: absolute;</div>
+                    </div>
+
+</body>
+</html>
